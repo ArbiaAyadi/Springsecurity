@@ -26,6 +26,7 @@ public class SecurityConfiguration {
 
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request.requestMatchers(
+                                "**",
                                 "/api/v1/auth-service/**",  // Your specific API access,
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
